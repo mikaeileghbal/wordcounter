@@ -1,14 +1,151 @@
-:root {
-	box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-*,
-::before,
-::after {
-	box-sizing: inherit;
+body {
+  box-sizing: inherit;
+  padding: 10px;
+  font-family: Helvetica, sans-serif;
+  background-color: #f8f8ed;
+  color: #424d61;
+  scroll-behavior: smooth;
 }
 
-mark {
-	background-color: lightblue;
-	color: white;
+p {
+  font-size: 14px;
+}
+// header styles
+//==============
+
+header {
+  padding: 5px 20px;
+
+  background-color: #428bca;
+  color: white;
+
+  h1 {
+    font-weight: 600;
+    font-size: 22px;
+  }
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  padding: 0;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    float: left;
+    display: block;
+    color: #fafae2;
+    font-size: 14px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #f1f1f1;
+      color: black;
+    }
+  }
+}
+
+// left column styles
+//===================
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+// right column styles
+//====================
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+  //background-color: #f1f1f1;
+}
+
+// card styles
+//============
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0px 6px 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc;
+  position: relative;
+
+  .card-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 0;
+  }
+}
+
+.clearfix::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+// footer styles
+//==============
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #333;
+  color: white;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .leftcolumn,
+  .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 481px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+.digits-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  margin: 0 auto;
+}
+.digits-col {
+  font-size: 12px;
+  padding: 20px;
+  background-color: lightblue;
+  border: 1ps solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .digits-info {
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+
+textarea {
+  width: 100%;
+  display: block;
+  border: none;
 }

@@ -1,31 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link rel="stylesheet" href="styles/main.css" />
-		<title>Document</title>
-	</head>
-	<body>
-		<h1>Word Counter</h1>
-		<p>
-			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab minima
-			architecto soluta tempora facilis. Quas quo magnam nobis in accusantium
-			temporibus aliquam repellendus, harum nam atque voluptas ipsum. Nostrum,
-			temporibus!
-		</p>
+    <link rel="stylesheet" href="styles/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>WORD Counter</h1>
+    </header>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <a href="#">Home</a>
+          <a href="#">About me</a>
+          <a href="#">Contact</a>
+          <a href="#">Portfolio</a>
+        </li>
+      </ul>
+    </nav>
 
-		<textarea name="inputtext" id="inputText" cols="60" rows="20"></textarea>
-
-		<p>Characters:<span id="character">10</span></p>
-		<p>Characters without space:<span id="characterNoSpace">10</span></p>
-		<p>Words:<span id="word">2</span></p>
-		<p>Sentences:<span id="sentence">2</span></p>
-		<p>Statistics Max:<span id="static-max"></span></p>
-		<p>Statistics Min:<span id="static-min"></span></p>
-
-		<script src="code/wordcount.js"></script>
-	</body>
+    <main class="clearfix">
+      <div class="leftcolumn">
+        <div class="card">
+          <h2 class="card-title">Title</h2>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="card">
+          <div class="digits-row clearfix">
+            <div class="digits-col">
+              <span id="words" class="digits-info">50</span>
+              <span>Words</span>
+            </div>
+            <div class="digits-col">
+              <span id="words" class="digits-info">50</span>
+              <span>Words</span>
+            </div>
+            <div class="digits-col">
+              <span id="words" class="digits-info">50</span>
+              <span>Words</span>
+            </div>
+            <div class="digits-col">
+              <span id="words" class="digits-info">50</span>
+              <span>Words</span>
+            </div>
+            <div class="digits-col">
+              <span id="words" class="digits-info">50</span>
+              <span>Words</span>
+            </div>
+            <div class="digits-col">
+              <span id="words" class="digits-info">50</span>
+              <span>Words</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <textarea
+            name=""
+            id=""
+            rows="16"
+            placeholder="Type or paste your text here..."
+          ></textarea>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <h2 class="card-title">Title</h2>
+          <div class="conyent">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
+              vitae?
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <h2 class="card-title">Title</h2>
+          <div class="conyent">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
+              vitae?
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <h2 class="card-title">Title</h2>
+          <div class="conyent">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
+              vitae?
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <h2 class="card-title">Title</h2>
+          <div class="conyent">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
+              vitae?
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <h2>footer</h2>
+    </footer>
+    <script src="code/wordcount.js"></script>
+  </body>
 </html>
