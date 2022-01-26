@@ -5,8 +5,10 @@
 body {
   box-sizing: inherit;
   padding: 10px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: Helvetica, sans-serif;
   background-color: #f8f8ed;
+  color: #424d61;
+  scroll-behavior: smooth;
 }
 
 p {
@@ -16,12 +18,14 @@ p {
 //==============
 
 header {
-  padding: 30px;
-  text-align: center;
-  background-color: white;
+  padding: 5px 20px;
+
+  background-color: #428bca;
+  color: white;
 
   h1 {
-    font-size: 50px;
+    font-weight: 600;
+    font-size: 22px;
   }
 }
 
@@ -40,6 +44,7 @@ header {
     float: left;
     display: block;
     color: #fafae2;
+    font-size: 14px;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -79,16 +84,9 @@ header {
   position: relative;
 
   .card-title {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    padding: 4px;
-    margin: 0;
-    text-align: center;
-    font-size: 18px;
-    text-transform: uppercase;
-    background-color: lightblue;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 0;
   }
 }
 
@@ -104,7 +102,8 @@ header {
 footer {
   padding: 20px;
   text-align: center;
-  background-color: #ddd;
+  background-color: #333;
+  color: white;
   margin-top: 20px;
 }
 
@@ -121,4 +120,32 @@ footer {
     float: none;
     width: 100%;
   }
-} ;
+}
+
+.digits-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  margin: 0 auto;
+}
+.digits-col {
+  font-size: 12px;
+  padding: 20px;
+  background-color: lightblue;
+  border: 1ps solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .digits-info {
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+
+textarea {
+  width: 100%;
+  display: block;
+  border: none;
+}
