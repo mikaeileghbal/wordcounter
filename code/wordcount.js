@@ -21,7 +21,6 @@ function replaceText(inputText, findTerm, replaceTerm) {
 function removeExtraSpaces(inputText) {
   return inputText.replace(/\s+/g, " ");
 }
-git;
 
 // Number of characters
 function numberOfCharsWithSpace(inputText) {
@@ -61,7 +60,7 @@ function countWords(inputText) {
 }
 
 function getCommonWords() {
-  return ["a", "the", "is", "in", "of", "to", "and"];
+  return ["a", "the", "is", "in", "of", "to", "and", "i"];
 }
 
 function sortObject(obj) {
@@ -82,7 +81,7 @@ function getStatistics(input) {
 
   //filter array
   return sortedWord.filter(function (item) {
-    return !commonWords.includes(item[0], 0);
+    return !commonWords.includes(item[0].toLowerCase(), 0);
   });
 }
 
@@ -121,6 +120,20 @@ inputText.addEventListener("input", (e) => {
   word.textContent = numberOfWords(input);
   character.textContent = numberOfCharsWithSpace(input);
   sentence.textContent = numberOfSentences(input);
-  staticMax.textContent = getStatistics(input).slice(0, 2);
-  staticMin.textContent = getStatistics(input).slice(-2);
+  const max = getStatistics(input).slice(0, 5);
+  const min = getStatistics(input).slice(-5);
+  console.log(max);
+
+  staticMax.innerHTML = "";
+  staticMin.innerHTML = "";
+  for (i = 0; i < max.length; i++) {
+    let item = document.createElement("li");
+    item.innerText = `${max[i][0]} : ${max[i][1]}`;
+    staticMax.appendChild(item);
+  }
+  for (i = 0; i < min.length; i++) {
+    let item = document.createElement("li");
+    item.innerText = `${min[i][0]} : ${min[i][1]}`;
+    staticMin.appendChild(item);
+  }
 });

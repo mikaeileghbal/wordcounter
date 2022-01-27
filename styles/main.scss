@@ -3,6 +3,8 @@
 }
 
 body {
+  max-width: 1024px;
+  margin: 0 auto;
   box-sizing: inherit;
   padding: 10px;
   font-family: Helvetica, sans-serif;
@@ -87,6 +89,14 @@ header {
     font-size: 16px;
     font-weight: 500;
     margin-top: 0;
+    text-transform: capitalize;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
   }
 }
 
@@ -132,7 +142,7 @@ footer {
 .digits-col {
   font-size: 12px;
   padding: 20px;
-  background-color: lightblue;
+  //background-color: lightblue;
   border: 1ps solid #ddd;
   display: flex;
   flex-direction: column;
@@ -141,11 +151,18 @@ footer {
   .digits-info {
     font-size: 24px;
     font-weight: 500;
+    color: lightskyblue;
   }
 }
 
 textarea {
   width: 100%;
   display: block;
-  border: none;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 5px;
+}
+textarea:focus {
+  border: 1px solid lightblue;
+  box-shadow: 0 0 10px rgba(173, 216, 230, 1);
 }
