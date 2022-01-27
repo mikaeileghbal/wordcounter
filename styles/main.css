@@ -202,15 +202,34 @@ textarea:focus {
 
 .file-container {
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px dashed #ccc;
   border-radius: 5px;
   margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-image: url("../images/download.png");
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: 40px center;
 }
 
 .file-container input[type="file"] {
   height: 0;
   position: relative;
   width: 0;
+}
+
+.file-container .drag-title {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
 }
 
 .button {
@@ -233,5 +252,15 @@ textarea:focus {
           box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) inset;
   position: relative;
   top: 2px;
+}
+
+.statics {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", sans-serif;
+}
+
+.statics li {
+  font-size: 10px;
+  padding: 5px 0;
+  font-weight: 500;
 }
 /*# sourceMappingURL=main.css.map */
