@@ -10,7 +10,13 @@
   </head>
   <body>
     <header>
-      <h1>WORD Counter</h1>
+      <h1>
+        <span>w</span>
+        <span>o</span>
+        <span>r</span>
+        <span>d</span>
+        Counter
+      </h1>
     </header>
     <nav class="topnav">
       <ul>
@@ -26,22 +32,18 @@
     <main class="clearfix">
       <div class="leftcolumn">
         <div class="card">
-          <h2 class="card-title">Title</h2>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </div>
-        <div class="card">
           <div class="digits-row clearfix">
             <div class="digits-col">
-              <span id="words" class="digits-info">50</span>
-              <span>Words</span>
+              <span id="word" class="digits-info">50</span>
+              <span>words</span>
             </div>
             <div class="digits-col">
-              <span id="words" class="digits-info">50</span>
-              <span>Words</span>
+              <span id="character" class="digits-info">50</span>
+              <span>Characters</span>
             </div>
             <div class="digits-col">
-              <span id="words" class="digits-info">50</span>
-              <span>Words</span>
+              <span id="sentence" class="digits-info">50</span>
+              <span>Sentences</span>
             </div>
             <div class="digits-col">
               <span id="words" class="digits-info">50</span>
@@ -60,7 +62,7 @@
         <div class="card">
           <textarea
             name=""
-            id=""
+            id="inputText"
             rows="16"
             placeholder="Type or paste your text here..."
           ></textarea>
@@ -68,8 +70,20 @@
       </div>
       <div class="rightcolumn">
         <div class="card">
+          <h2 class="card-title">most used Words</h2>
+          <div class="content">
+            <ul id="static-max"></ul>
+          </div>
+        </div>
+        <div class="card">
+          <h2 class="card-title">least used words</h2>
+          <div class="content">
+            <ul id="static-min"></ul>
+          </div>
+        </div>
+        <div class="card">
           <h2 class="card-title">Title</h2>
-          <div class="conyent">
+          <div class="content">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
               vitae?
@@ -78,25 +92,7 @@
         </div>
         <div class="card">
           <h2 class="card-title">Title</h2>
-          <div class="conyent">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
-              vitae?
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <h2 class="card-title">Title</h2>
-          <div class="conyent">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
-              vitae?
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <h2 class="card-title">Title</h2>
-          <div class="conyent">
+          <div class="content">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
               vitae?
