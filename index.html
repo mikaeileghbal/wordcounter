@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles/main.css" />
     <title>Document</title>
   </head>
-  <body>
+  <body draggable="false">
     <div class="clearfix header-container">
       <header>
         <h1>
@@ -65,9 +65,11 @@
             placeholder="Type or paste your text here..."
           ></textarea>
           <div class="file-container">
+            <img src="images/download.png" alt="upload" />
             <h4 class="drag-title">drag & drop your text file here</h4>
-            <button id="btnFileOpen" class="button">Browse files...</button>
+            <button id="btnFileOpen" class="button">Browse</button>
             <input type="file" name="file" id="fileInput" />
+            <span class="error">Plaese select a text file ...</span>
           </div>
         </div>
       </div>
