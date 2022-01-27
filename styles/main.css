@@ -1,11 +1,13 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
   max-width: 1024px;
   margin: 0 auto;
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
   padding: 10px;
   font-family: Helvetica, sans-serif;
   background-color: #f8f8ed;
@@ -22,6 +24,7 @@ header {
   background-color: #428bca;
   color: white;
 }
+
 header h1 {
   font-weight: 600;
   font-size: 22px;
@@ -32,11 +35,13 @@ header h1 {
   background-color: #333;
   padding: 0;
 }
+
 .topnav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
+
 .topnav a {
   float: left;
   display: block;
@@ -46,6 +51,7 @@ header h1 {
   padding: 14px 16px;
   text-decoration: none;
 }
+
 .topnav a:hover {
   background-color: #f1f1f1;
   color: black;
@@ -67,16 +73,19 @@ header h1 {
   padding: 20px;
   margin-top: 20px;
   border-radius: 5px;
-  box-shadow: 0 0px 6px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0px 6px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0px 6px 0 rgba(0, 0, 0, 0.2);
   border: 1px solid #ccc;
   position: relative;
 }
+
 .card .card-title {
   font-size: 16px;
   font-weight: 500;
   margin-top: 0;
   text-transform: capitalize;
 }
+
 .card ul {
   list-style-type: none;
   margin: 0;
@@ -100,21 +109,25 @@ footer {
 
 @media screen and (max-width: 800px) {
   .leftcolumn,
-.rightcolumn {
+  .rightcolumn {
     width: 100%;
     padding: 0;
   }
 }
+
 @media screen and (max-width: 481px) {
   .topnav a {
     float: none;
     width: 100%;
   }
 }
+
 .digits-row {
   width: 100%;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  -ms-grid-columns: (minmax(100px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 10px;
   margin: 0 auto;
 }
@@ -123,10 +136,18 @@ footer {
   font-size: 12px;
   padding: 20px;
   border: 1ps solid #ddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .digits-col .digits-info {
   font-size: 24px;
   font-weight: 500;
@@ -143,5 +164,14 @@ textarea {
 
 textarea:focus {
   border: 1px solid lightblue;
-  box-shadow: 0 0 10px lightblue;
-}/*# sourceMappingURL=main.css.map */
+  -webkit-box-shadow: 0 0 10px lightblue;
+          box-shadow: 0 0 10px lightblue;
+}
+
+.file-container {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+/*# sourceMappingURL=main.css.map */
