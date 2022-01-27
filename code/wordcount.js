@@ -137,3 +137,35 @@ inputText.addEventListener("input", (e) => {
     staticMin.appendChild(item);
   }
 });
+
+// Upload file feature
+//====================
+const fileInput = document.querySelector("#fileInput");
+const btnOpen = document.querySelector("#btnFileOpen");
+
+btnOpen.addEventListener("click", (e) => {
+  fileInput.click();
+});
+
+fileInput.addEventListener(
+  "input",
+  () => {
+    read(displayText);
+  },
+  false
+);
+
+function read(callBack) {
+  let file = fileInput.files.item(0);
+  let reader = new FileReader();
+
+  reader.onload = function () {
+    callBack(reader.result);
+  };
+
+  reader.readAsText(file);
+}
+
+function displayText(result) {
+  inputText.value = result;
+}
