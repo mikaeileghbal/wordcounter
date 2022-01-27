@@ -9,25 +9,25 @@
     <title>Document</title>
   </head>
   <body>
-    <header>
-      <h1>
-        <span>w</span>
-        <span>o</span>
-        <span>r</span>
-        <span>d</span>
-        Counter
-      </h1>
-    </header>
-    <nav class="topnav">
-      <ul>
-        <li>
-          <a href="#">Home</a>
-          <a href="#">About me</a>
-          <a href="#">Contact</a>
-          <a href="#">Portfolio</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="clearfix header-container">
+      <header>
+        <h1>
+          <span>w</span>
+          <span>o</span>
+          <span>r</span>
+          <span>d</span>
+          Counter
+        </h1>
+      </header>
+      <nav class="topnav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About me</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Portfolio</a></li>
+        </ul>
+      </nav>
+    </div>
 
     <main class="clearfix">
       <div class="leftcolumn">
@@ -35,37 +35,39 @@
           <div class="digits-row clearfix">
             <div class="digits-col">
               <span id="word" class="digits-info">50</span>
-              <span>words</span>
+              <span class="card-title">words</span>
             </div>
             <div class="digits-col">
               <span id="character" class="digits-info">50</span>
-              <span>Characters</span>
+              <span class="card-title">Characters</span>
             </div>
             <div class="digits-col">
               <span id="sentence" class="digits-info">50</span>
-              <span>Sentences</span>
+              <span class="card-title">Sentences</span>
             </div>
             <div class="digits-col">
               <span id="words" class="digits-info">50</span>
-              <span>Words</span>
+              <span class="card-title">Words</span>
             </div>
             <div class="digits-col">
               <span id="words" class="digits-info">50</span>
-              <span>Words</span>
+              <span class="card-title">Words</span>
             </div>
             <div class="digits-col">
               <span id="words" class="digits-info">50</span>
-              <span>Words</span>
+              <span class="card-title">Words</span>
             </div>
           </div>
-        </div>
-        <div class="card">
           <textarea
             name=""
             id="inputText"
             rows="16"
             placeholder="Type or paste your text here..."
           ></textarea>
+          <div class="file-container">
+            <button id="btnFileOpen" class="button">Open file...</button>
+            <input type="file" name="file" id="fileInput" />
+          </div>
         </div>
       </div>
       <div class="rightcolumn">
