@@ -1,27 +1,10 @@
-<<<<<<< HEAD
-:root {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-*,
-::before,
-::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
-
-mark {
-  background-color: lightblue;
-  color: white;
-}
-/*# sourceMappingURL=main.css.map */
-=======
 * {
   box-sizing: border-box;
 }
 
 body {
+  max-width: 1024px;
+  margin: 0 auto;
   box-sizing: inherit;
   padding: 10px;
   font-family: Helvetica, sans-serif;
@@ -92,6 +75,13 @@ header h1 {
   font-size: 16px;
   font-weight: 500;
   margin-top: 0;
+  text-transform: capitalize;
+}
+.card ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
 }
 
 .clearfix::after {
@@ -132,7 +122,6 @@ footer {
 .digits-col {
   font-size: 12px;
   padding: 20px;
-  background-color: lightblue;
   border: 1ps solid #ddd;
   display: flex;
   flex-direction: column;
@@ -141,11 +130,18 @@ footer {
 .digits-col .digits-info {
   font-size: 24px;
   font-weight: 500;
+  color: lightskyblue;
 }
 
 textarea {
   width: 100%;
   display: block;
-  border: none;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 5px;
+}
+
+textarea:focus {
+  border: 1px solid lightblue;
+  box-shadow: 0 0 10px lightblue;
 }/*# sourceMappingURL=main.css.map */
->>>>>>> f07d02c00dbf0fc29a42f0e7ef59dce116ddb9fd
