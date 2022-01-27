@@ -18,23 +18,45 @@ p {
 }
 // header styles
 //==============
+.header-container {
+  width: 100%;
+  padding: 0 16px;
+  background-color: white;
+}
 
 header {
+  float: left;
   padding: 5px 20px;
 
-  background-color: #428bca;
-  color: white;
-
   h1 {
+    font-family: "Times New Roman", Times, serif;
     font-weight: 600;
     font-size: 22px;
+    transform: scaleX(1.1);
+    //margin-left: 40px;
+  }
+  span {
+    text-transform: uppercase;
+    font-weight: 800;
+    background-color: royalblue;
+    color: white;
+    display: inline-block;
+    width: 24px;
+    text-align: center;
+    //border-radius: 5px;
+  }
+  span + span {
   }
 }
 
 .topnav {
+  float: right;
+  vertical-align: middle;
   overflow: hidden;
-  background-color: #333;
+  //background-color: #333;
   padding: 0;
+  position: relative;
+  top: 10px;
 
   ul {
     list-style-type: none;
@@ -42,11 +64,15 @@ header {
     margin: 0;
   }
 
+  li {
+    float: right;
+  }
   a {
-    float: left;
+    color: #555;
     display: block;
-    color: #fafae2;
     font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.4px;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -86,10 +112,12 @@ header {
   position: relative;
 
   .card-title {
-    font-size: 16px;
+    font-size: 10px;
     font-weight: 500;
+    color: #777;
     margin-top: 0;
-    text-transform: capitalize;
+    letter-spacing: 1px;
+    text-transform: uppercase;
   }
 
   ul {
@@ -117,19 +145,24 @@ footer {
   margin-top: 20px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 769px) {
   .leftcolumn,
   .rightcolumn {
     width: 100%;
     padding: 0;
   }
-}
 
-@media screen and (max-width: 481px) {
-  .topnav a {
+  .topnav,
+  .topnav li {
     float: none;
     width: 100%;
   }
+  .h1 {
+    float: none;
+  }
+}
+
+@media screen and (max-width: 481px) {
 }
 
 .digits-row {
@@ -150,14 +183,17 @@ footer {
 
   .digits-info {
     font-size: 24px;
-    font-weight: 500;
-    color: lightskyblue;
+    font-weight: 600;
+    color: royalblue;
   }
 }
 
 textarea {
   width: 100%;
+  padding: 8px;
+  font-size: 16px;
   display: block;
+  color: #333;
   border: 1px solid #ccc;
   outline: none;
   border-radius: 5px;
@@ -172,4 +208,29 @@ textarea:focus {
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-top: 20px;
+
+  input[type="file"] {
+    height: 0;
+    position: relative;
+    width: 0;
+  }
+}
+
+.button {
+  border: none;
+  background-color: royalblue;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5) inset;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten($color: rgb(65, 105, 225), $amount: 5);
+  }
+  &:active {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) inset;
+    position: relative;
+    top: 2px;
+  }
 }

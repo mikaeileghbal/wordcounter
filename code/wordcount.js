@@ -141,6 +141,11 @@ inputText.addEventListener("input", (e) => {
 // Upload file feature
 //====================
 const fileInput = document.querySelector("#fileInput");
+const btnOpen = document.querySelector("#btnFileOpen");
+
+btnOpen.addEventListener("click", (e) => {
+  fileInput.click();
+});
 
 fileInput.addEventListener(
   "input",
