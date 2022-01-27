@@ -169,3 +169,5 @@ function read(callBack) {
 function displayText(result) {
   inputText.value = result;
 }
+
+// Drag and Drop feature
