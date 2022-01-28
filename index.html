@@ -9,53 +9,42 @@
     <title>Document</title>
   </head>
   <body draggable="false">
-    <div class="clearfix header-container">
-      <header>
-        <h1>
-          <span>w</span>
-          <span>o</span>
-          <span>r</span>
-          <span>d</span>
-          Counter
-        </h1>
-      </header>
-      <nav class="topnav">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About me</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Portfolio</a></li>
-        </ul>
-      </nav>
+    <div class="topbar">
+      <div class="header-container">
+        <header>
+          <h1>
+            <span>w</span>
+            <span>o</span>
+            <span>r</span>
+            <span>d</span>
+            Counter
+          </h1>
+        </header>
+        <nav class="topnav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About me</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Portfolio</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
-
     <main class="clearfix">
       <div class="leftcolumn">
         <div class="card">
           <div class="digits-row clearfix">
             <div class="digits-col">
-              <span id="word" class="digits-info">0</span>
               <span class="card-title">words</span>
+              <span id="word" class="digits-info">0</span>
             </div>
             <div class="digits-col">
-              <span id="character" class="digits-info">0</span>
               <span class="card-title">Characters</span>
+              <span id="character" class="digits-info">0</span>
             </div>
             <div class="digits-col">
-              <span id="sentence" class="digits-info">0</span>
               <span class="card-title">Sentences</span>
-            </div>
-            <div class="digits-col">
-              <span id="words" class="digits-info">0</span>
-              <span class="card-title">Words</span>
-            </div>
-            <div class="digits-col">
-              <span id="words" class="digits-info">0</span>
-              <span class="card-title">Words</span>
-            </div>
-            <div class="digits-col">
-              <span id="words" class="digits-info">0</span>
-              <span class="card-title">Words</span>
+              <span id="sentence" class="digits-info">0</span>
             </div>
           </div>
           <textarea
@@ -92,28 +81,19 @@
             </ul>
           </div>
         </div>
-        <div class="card">
-          <h2 class="card-title">Title</h2>
-          <div class="content">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
-              vitae?
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <h2 class="card-title">Title</h2>
-          <div class="content">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
-              vitae?
-            </p>
-          </div>
-        </div>
       </div>
     </main>
     <footer>
-      <h2>footer</h2>
+      <div class="container">
+        <p>&copy;2022 - Mikaeil Eghbal</p>
+
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About me</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Portfolio</a></li>
+        </ul>
+      </div>
     </footer>
     <script src="code/wordcount.js"></script>
   </body>
