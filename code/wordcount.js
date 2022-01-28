@@ -168,6 +168,7 @@ function read(callBack, file) {
 
 function displayText(result) {
   inputText.value = result;
+  inputText.dispatchEvent(new Event("input"));
 }
 
 // Drag and Drop feature
