@@ -3,10 +3,10 @@
 }
 
 body {
-  max-width: 1024px;
+  //max-width: 1024px;
   margin: 0 auto;
   box-sizing: inherit;
-  padding: 10px;
+
   font-family: Helvetica, sans-serif;
   background-color: #f8f8ed;
   color: #424d61;
@@ -16,46 +16,68 @@ body {
 p {
   font-size: 14px;
 }
+
+//========================
+// Scrollbar customization
+//========================
+
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+::-webkit-scrollbar-thumb {
+  background-color: silver;
+  border-radius: 3px;
+}
+
 // header styles
 //==============
+.topbar {
+  background: white;
+  border-bottom: 1px solid #ccc;
+}
+.header-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  //background-color: red;
+  font-size: 14px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
 
 header {
-  padding: 5px 20px;
-
-  background-color: #428bca;
-  color: white;
+  float: left;
+  padding: 0px 0px;
 
   h1 {
-    font-weight: 600;
-    font-size: 22px;
+    margin: 14px 0;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 800;
+    font-size: 26px;
+
+    //margin-left: 40px;
+  }
+  span {
+    text-transform: uppercase;
+    font-weight: 800;
+    background-color: royalblue;
+    color: white;
+    display: inline-block;
+    width: 24px;
+    text-align: center;
+
+    //border-radius: 5px;
+  }
+  span + span {
+    margin-left: -3px;
   }
 }
 
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-  padding: 0;
-
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  a {
-    float: left;
-    display: block;
-    color: #fafae2;
-    font-size: 14px;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-
-    &:hover {
-      background-color: #f1f1f1;
-      color: black;
-    }
-  }
+main {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 10px 0px;
 }
 
 // left column styles
@@ -86,10 +108,12 @@ header {
   position: relative;
 
   .card-title {
-    font-size: 16px;
+    font-size: 10px;
     font-weight: 500;
+    color: #777;
     margin-top: 0;
-    text-transform: capitalize;
+    letter-spacing: 1px;
+    text-transform: uppercase;
   }
 
   ul {
@@ -112,23 +136,66 @@ header {
 footer {
   padding: 20px;
   text-align: center;
-  background-color: #333;
-  color: white;
+  //background-color: white;
+  color: #333;
+  font-size: 12px;
   margin-top: 20px;
+  padding: 5em 0;
+  p {
+    font-size: 10px;
+  }
+  .container {
+    max-width: 1024px;
+
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
-@media screen and (max-width: 800px) {
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  padding: 0 0px;
+}
+li:not(:last-of-type) {
+  margin-right: 50px;
+}
+a {
+  padding: 8px 0px;
+  text-decoration: none;
+  color: #333;
+
+  &:hover {
+    border-bottom: 2px solid #333;
+  }
+}
+
+@media screen and (max-width: 769px) {
   .leftcolumn,
   .rightcolumn {
     width: 100%;
     padding: 0;
   }
+
+  .topnav,
+  .topnav li {
+    float: none;
+    width: 100%;
+  }
+  .h1 {
+    float: none;
+  }
 }
 
 @media screen and (max-width: 481px) {
-  .topnav a {
-    float: none;
-    width: 100%;
+  .file-container {
+    flex-direction: column;
   }
 }
 
@@ -141,7 +208,7 @@ footer {
 }
 .digits-col {
   font-size: 12px;
-  padding: 20px;
+  padding: 0 20px 20px;
   //background-color: lightblue;
   border: 1ps solid #ddd;
   display: flex;
@@ -150,19 +217,101 @@ footer {
 
   .digits-info {
     font-size: 24px;
-    font-weight: 500;
-    color: lightskyblue;
+    font-weight: 600;
+    color: royalblue;
+    margin-top: 10px;
   }
 }
 
 textarea {
   width: 100%;
+  padding: 8px;
+  font-size: 16px;
   display: block;
+  color: #333;
   border: 1px solid #ccc;
   outline: none;
   border-radius: 5px;
+  resize: none;
+  cursor: auto;
 }
 textarea:focus {
   border: 1px solid lightblue;
   box-shadow: 0 0 10px rgba(173, 216, 230, 1);
+}
+
+.file-container {
+  padding: 20px;
+  position: relative;
+  border: 1px dashed #ccc;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  img {
+    width: 40px;
+  }
+  input[type="file"] {
+    height: 0;
+    position: relative;
+    width: 0;
+  }
+
+  .drag-title {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+}
+
+.button {
+  border: none;
+  background-color: royalblue;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5) inset;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten($color: rgb(65, 105, 225), $amount: 5);
+  }
+  &:active {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) inset;
+    position: relative;
+    top: 2px;
+  }
+}
+
+.statics {
+  font-family: "Courier New", Courier, monospace;
+
+  ul {
+  }
+  li {
+    display: block;
+    font-size: 12px;
+    padding: 5px 0;
+    font-weight: 500;
+  }
+}
+
+.error {
+  opacity: 0;
+  position: absolute;
+  bottom: 4px;
+  left: 32px;
+  padding: 5px 10px;
+  background-color: crimson;
+  color: white;
+  font-size: 12px;
+  border-radius: 0px 10px;
+  transition: opacity 1s ease-in;
+}
+
+.error.show {
+  opacity: 1;
+  transition: opacity 0.2s ease-in;
 }
