@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Document</title>
   </head>
   <body draggable="false">
@@ -56,7 +60,9 @@
           <div class="file-container">
             <img src="images/download.png" alt="upload" />
             <h4 class="drag-title">drag & drop your text file here</h4>
-            <button id="btnFileOpen" class="button">Browse</button>
+            <button id="btnFileOpen" class="button">
+              <i class="fa fa-plus" aria-hidden="true"></i> Browse
+            </button>
             <input type="file" name="file" id="fileInput" />
             <span class="error">Plaese select a text file ...</span>
           </div>
