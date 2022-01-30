@@ -197,7 +197,9 @@ a:hover {
   border: 1ps solid #ddd;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
+  text-align: center;
 }
 .digits-col .digits-info {
   font-size: 24px;
