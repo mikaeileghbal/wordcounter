@@ -28,6 +28,13 @@ function numberOfCharsWithSpace(inputText) {
 }
 
 // count only words
+function numberOfNoSpace(input) {
+  let wordsPattern = /\S/g;
+  const result = input.match(wordsPattern);
+  return result ? result.length : 0;
+}
+
+// count only none space characters
 function numberOfWords(input) {
   let wordsPattern = /\b\S+\b/g;
   const result = input.match(wordsPattern);
@@ -111,6 +118,7 @@ const inputText = document.querySelector("#inputText");
 const word = document.querySelector("#word");
 const character = document.querySelector("#character");
 const sentence = document.querySelector("#sentence");
+const nospace = document.querySelector("#nospace");
 const staticMax = document.querySelector("#static-max");
 const staticMin = document.querySelector("#static-min");
 const characterNoSpace = document.querySelector("#characterNoSpace");
@@ -120,6 +128,7 @@ inputText.addEventListener("input", (e) => {
   word.textContent = numberOfWords(input);
   character.textContent = numberOfCharsWithSpace(input);
   sentence.textContent = numberOfSentences(input);
+  nospace.textContent = numberOfNoSpace(input);
   const max = getStatistics(input).slice(0, 5);
   const min = getStatistics(input).slice(-5);
   console.log(max);
