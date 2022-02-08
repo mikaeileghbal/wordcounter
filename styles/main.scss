@@ -194,12 +194,13 @@ a {
     width: 100%;
   }
   .topnav {
-    display: flex;
-    flex-direction: column;
     ul {
+      display: flex;
+      flex-direction: column;
       padding-bottom: 10px;
     }
     li {
+      display: inline;
       padding: 10px 20px;
     }
   }
