@@ -93,6 +93,7 @@ function getStatistics(input) {
 }
 
 // Test program
+
 console.log(findText("hello welcome hello again", "hel"));
 console.log(replaceText("hello welcome hello again", "hel", "wel"));
 console.log(removeExtraSpaces("There    are a   lot    of spaces."));
@@ -100,19 +101,7 @@ console.log(numberOfCharsWithSpace("This  is a text"));
 const textOfBook =
   "This is a text is text in text is from my favorite text my book. book my of notes";
 
-// using split() with ReegExp
-// console.log("1, 2, 3,\n4, 5".split(","));
-// console.log("1, 2, 3,\n4, 5".split(/\s*,\s*/));
-
-//--------------------------------------------------------------------
-//RegExp constructor  - be careful with \ escape
-
-// let patt27 = new RegExp("\\d{5}", "gi");
-
-// console.log(findTextCount());
-
-// Refrence DOM elements
-//======================
+// dom references
 
 const inputText = document.querySelector("#inputText");
 const word = document.querySelector("#word");
@@ -148,7 +137,7 @@ inputText.addEventListener("input", (e) => {
 });
 
 // Upload file feature
-//====================
+
 const fileInput = document.querySelector("#fileInput");
 const btnOpen = document.querySelector("#btnFileOpen");
 
@@ -181,6 +170,7 @@ function displayText(result) {
 }
 
 // Drag and Drop feature
+
 const fileContainer = document.querySelector(".file-container");
 
 fileContainer.addEventListener("dragenter", dragEnter, false);
