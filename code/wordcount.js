@@ -160,7 +160,8 @@ const Wordcount = (function () {
   const btnOpen = document.querySelector("#btnFileOpen");
 
   btnOpen.addEventListener("click", (e) => {
-    fileInput.click();
+    fileInput.value = "";
+    fileInput.click(e);
   });
 
   fileInput.addEventListener(
@@ -184,7 +185,7 @@ const Wordcount = (function () {
 
   function displayText(result) {
     inputText.value = result;
-    inputText.dispatchEvent(new Event("input"));
+    inputText.dispatchEvent(new Event("keyup"));
   }
 
   // Drag and Drop feature
@@ -203,6 +204,8 @@ const Wordcount = (function () {
   function dragOver(e) {
     e.stopPropagation();
     e.preventDefault();
+    document.querySelector(".file-container").style.backgroundColor =
+      "rgba(244, 67, 54, 0.2)";
   }
 
   function drop(e) {
@@ -213,6 +216,8 @@ const Wordcount = (function () {
     const file = dt.files.item(0);
 
     handleFiles(file);
+
+    document.querySelector(".file-container").style.backgroundColor = "white";
   }
 
   function handleFiles(file) {
