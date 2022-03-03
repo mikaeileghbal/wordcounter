@@ -171,12 +171,12 @@ ul {
   padding: 0;
 }
 
-li {
+ul li {
   display: inline-block;
   padding: 0 0px;
 }
 
-li:not(:last-of-type) {
+ul li:not(:last-of-type) {
   margin-right: 50px;
 }
 
@@ -431,12 +431,17 @@ textarea:focus {
 .description h2 {
   font-weight: 300;
   font-size: 20px;
-  border-bottom: 1px solid var(--gray);
+  border-bottom: 1px solid #ddd;
   text-transform: uppercase;
 }
 
 .description p {
   color: #777;
   line-height: 1.6;
+}
+
+.description li {
+  padding: 8px;
+  color: var(--blue);
 }
 /*# sourceMappingURL=main.css.map */
