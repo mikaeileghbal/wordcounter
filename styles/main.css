@@ -164,13 +164,13 @@ a:hover {
 
 @media screen and (max-width: 1048px) {
   main,
-.description {
+  .description {
     padding: 10px 20px 0;
   }
 }
 @media screen and (max-width: 769px) {
   .leftcolumn,
-.rightcolumn {
+  .rightcolumn {
     width: 100%;
     padding: 0;
   }
@@ -178,7 +178,7 @@ a:hover {
     padding: 20px;
   }
   .topnav,
-.topnav li {
+  .topnav li {
     float: none;
     width: 100%;
   }
@@ -290,11 +290,12 @@ textarea:focus {
   background-color: var(--theme-color);
   color: white;
   padding: 16px 30px;
-  border-radius: 5px;
+  border-radius: 4px;
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
+  transition: all 0.2s ease-out;
   cursor: pointer;
 }
 .button i {
