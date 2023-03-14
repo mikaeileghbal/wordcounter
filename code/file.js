@@ -77,5 +77,5 @@ function showError() {
     (() => {
       error.classList.remove("show");
     })();
-  }, 1000);
+  }, 2000);
 }
