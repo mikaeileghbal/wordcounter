@@ -17,11 +17,10 @@ function init() {
 
   let timer = null;
   inputText.addEventListener("keyup", (event) => {
-    console.log("keyup");
     if (timer) {
-      console.log("clear");
       clearTimeout(timer);
     }
+
     timer = setTimeout(startCounting, 300);
   });
 
